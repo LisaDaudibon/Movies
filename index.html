@@ -6,27 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/solar/bootstrap.min.css" rel="stylesheet">
   <title>Movies</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
   <h1>Moviepédia</h1>
-  <form class="row g-3 align-items-center" id="search-bar">
+
+  <!-- Create a form to search for movies -->
+  <form class="row g-3 align-items-center" id="movieForm">
     <div class="col-auto">
-      <label for="inputPassword6" class="col-form-label">Tape le titre d'un film </label>
+      <label for="searchmovies" class="col-form-label">Nom du film</label>
     </div>
     <br>
     <div class="col-auto">
-      <input type="search" id="searchmovies" class="form-control" aria-labelledby="passwordHelpInline">
+      <input type="text" id="searchmovies" class="form-control" placeholder="Film...">
     </div>
-    <div class=col-auto>
-      <input class="btn btn-primary" type="submit" value="Submit" id="submitsearch" onsubmit="return fetchMovies">
+    <div class="col-auto">
+      <input class="btn btn-primary" type="submit" value="Submit" id="submitsearch">
     </div>
   </form>
-<br>
-  <div id="movies-container"></div>
-
-  <script src="lib/index.js"></script>
+  <br>
+  <!-- Create a container to display movie results -->
+  <div class="container">
+    <div class="row">
+      <div id="movies-container"></div>
+    </div>
+  </div>
 </body>
-
+    <!-- Add JavaScript code to handle form submission -->
+<script src="lib/index.js"></script>
 </html>
