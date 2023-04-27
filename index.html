@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/solar/bootstrap.min.css" rel="stylesheet">
+  <title>Movies</title>
+</head>
+
+<body>
+
+  <h1>Moviepédia</h1>
+  <form class="row g-3 align-items-center" id="search-bar">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">Tape le titre d'un film </label>
+    </div>
+    <br>
+    <div class="col-auto">
+      <input type="search" id="searchmovies" class="form-control" aria-labelledby="passwordHelpInline">
+    </div>
+    <div class=col-auto>
+      <input class="btn btn-primary" type="submit" value="Submit" id="submitsearch" onsubmit="return fetchMovies">
+    </div>
+  </form>
+<br>
+  <div id="movies-container"></div>
+
+  <script src="lib/index.js"></script>
+</body>
+
+</html>
